@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid black;
+            padding: 10px;
+            width: 200px;
+            height: 400px;
+        }
+
+        .box1 {
+            display: flex;
+            border: 1px solid blue;
+            margin-bottom: 10px;
+            width: 80px;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid black;
+            padding: 10px;
+            width: 600px;
+            height: 400px;
+        }
+
+        .box2 {
+            border: 1px solid black;
+            width: 100px;
+            height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"><button>클릭1</button></div>
+        <div class="box1"><button>클릭2</button></div>
+        <div class="box1"><button>클릭3</button></div>
+        <div class="box1"><button>클릭4</button></div>
+    </div>
+
+    <div class="container2">
+        <div class="box2"></div>     
+        <div class="box2"></div>     
+        <div class="box2"></div>     
+        <div class="box2"></div>     
+        <div class="box2"></div>     
+        <div class="box2"></div>     
+        <div class="box2"></div>     
+        <div class="box2"></div>     
+        <div class="box2"></div>     
+        <div class="box2"></div>     
+        <div class="box2"></div>     
+        <div class="box2"></div>     
+    </div>
+</body>
+</html>
