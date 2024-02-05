@@ -1,0 +1,22 @@
+.side-bar-layout {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #33333311;
+}
+
+.side-bar-container {
+    width: 320px;
+    height: 100%;
+    background-color: rgb(45, 51, 59);
+    box-shadow: rgb(68, 76, 86) 0px 0px 0px 1px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.side-bar-header {
+    width: 100%;
+    padding: 8px 8px 0px;
+}
