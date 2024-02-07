@@ -49,7 +49,7 @@ function handleAddTodoModalOpen() {
     submitButton.onclick = handleAddTodoSubmit;
 
     todoInput.onkeydown = (e) => {
-        if(e.ctrlKey && e.keyCode ===13) {
+        if(!e.shiftKey && e.keyCode ===13) {
             submitButton.click();
         }
     }
@@ -73,7 +73,7 @@ function handleEditTodoModalOpen(todoId) {
     submitButton.onclick = () => handleEditTodoSubmit(todoId);
 
     todoInput.onkeydown = (e) => {
-        if(e.ctrlKey && e.keyCode ===13) {
+        if(!e.shiftKey && e.keyCode ===13) {
             submitButton.click();
         }
     }
