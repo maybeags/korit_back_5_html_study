@@ -27,44 +27,38 @@
 
 async function handleAddClick() {
     const productInputs = document.querySelectorAll(".product-inputs");
-    const data = {
+    const product = {
         productName: productInputs[0].value,
-        productPrice: productInputs[1].value,
+        productPrice: parseInt(productInputs[1].value),
         productSize: productInputs[2].value
     };
 
-    console.log(data);
-    const jsonData = JSON.stringify(data);
-    console.log(jsonData);
-    const dataObj = JSON.parse(jsonData);
-    console.log(dataObj);
-
-    const option = {
-        method: "post",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: jsonData
-    };
+    // const option = {
+    //     method: "post",
+    //     headers: {
+    //         "Content-Type": "application/json"
+    //     },
+    //     body: jsonData
+    // };
 
     try {
-        const response = await fetch("http://localhost:8080/product/product", option);
+        const response = await fetch("http://localhost:8080/product/product", {
+            method: "post",
+            headrs: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(product)
+        });
 
         if(!response.ok) {
             throw await response.json();
         }
-        
-        console.log(response);
-    
-        const json =  await response.json();
-    
-        console.log(json);
 
-        console.log("test");
+        const responseData = await response.json();
+        console.log(responseData);
+        alert(`${responseData.successCount}건의 상품 추가 완료`);
     
     } catch(error) {
-        console.log(error);
-        alert("안돼");
+        alert(error?.errorMessage);
     }
-
 }
